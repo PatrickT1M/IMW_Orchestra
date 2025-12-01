@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Libertinus Sans", sans-serif;
+}
+
+
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/image.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    width: 420px;
+    background-color: rgb(117, 117, 117);
+    border: 5px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    color:#fff;
+    padding: 30px 40px;
+    box-shadow: rgb(192, 192, 192) 0px 20px 30px -10px;
+}
+
+.container h1{
+    text-shadow: 4px 2px 6px rgba(105,105,105,0.4);
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+}
+
+h5{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+.input--box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input--box input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid rgba(151, 140, 140, 0.2);
+    border-radius: 40px;
+    outline: none;
+    font-size: 16px;
+    color: #000000;
+    padding: 20px 45px 20px 20px;
+}
+
+.input--box input::placeholder{
+    color: #000000;
+}
+
+.input--box i{
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lembrar--senha{
+    display: flex;
+    justify-content: space-between;
+    margin: -15px 0 15px;
+}
+
+.lembrar--senha label input{
+    accent-color: #fff;
+    margin-right: 5px;
+}
+
+.lembrar--senha a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.lembrar--senha a:hover{
+    text-decoration: underline;
+}
+
+.login{
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    background-color: #fff;
+    border: none;
+    border-radius:40px;
+    cursor: pointer;
+    font-size: 16px;
+    color:#333;
+    font-weight: 600;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.login:hover{
+    border: 2px solid rgba(255,255,255,0.2);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: #000000;
+    transition: .5s;
+}
+
+.cadastrar--conta{
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.cadastrar--conta a{
+    text-decoration: none;
+    color:#000000;
+    font-weight: 700;
+}
+
+.cadastrar--conta a:hover{
+    text-decoration: underline;
+    color:#696969;
+}
+
+/* ESTILOS DO MODAL */
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; /* Aumentamos o z-index para garantir que fique acima de tudo */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.7); /* Fundo semi-transparente */
+}
+
+.conteudo--modal {
+    background-color: #fefefe;
+    /* Ajuste na margem: menor em cima para centralizar melhor */
+    margin: 5% auto; 
+    padding: 20px;
+    border: 2px solid rgba(255,255,255,0.2);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    
+    /* Largura Responsiva: */
+    width: 90%; /* Ocupa 90% da largura em telas menores */
+    max-width: 600px; /* Limite máximo para telas maiores */
+    
+    border-radius: 30px;
+}
+
+/* NOVO ESTILO: Para o Modal Secundário (Aninhado) */
+.modal-secundario {
+    /* Garante que o modal secundário apareça na frente do principal */
+    z-index: 1050; 
+}
+
+/* Estilo para os botões de instrumento (para responsividade no modal principal) */
+.btn-instrumento {
+    width: 100%; /* Faz o botão de instrumento ocupar toda a largura disponível */
+    margin-bottom: 10px; /* Dá um pequeno espaço entre os botões */
+}
+
+/* Ajuste para o iframe dentro do modal secundário */
+.conteudo--modal iframe {
+    width: 100%; /* Ocupa a largura total do conteúdo do modal */
+    height: 500px; /* Altura fixa que pode ser ajustada */
+    border: none;
+    margin-top: 15px;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Media Query para dispositivos com largura máxima de 600px (smartphones) */
+@media screen and (max-width: 600px) {
+    
+    /* Ajusta a largura da caixa principal (onde está o título Partituras) */
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    /* Ajusta o conteúdo do modal para ocupar quase toda a tela do celular */
+    .conteudo--modal {
+        width: 98%; 
+        margin: 5% auto; /* Ajusta o espaçamento do topo */
+        max-height: 90vh; /* Limita a altura máxima para que ele caiba na tela */
+        overflow-y: auto; /* Permite rolar o conteúdo, se necessário */
+        padding: 10px;
+    }
+    
+    /* Pode diminuir a altura do iframe em telas muito pequenas */
+    .conteudo--modal iframe {
+        height: 400px; 
+    }
+}

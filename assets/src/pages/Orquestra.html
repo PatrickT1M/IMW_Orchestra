@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/login.css">
+    <title>Partituras - Orchestra</title>
+</head>
+
+<body>
+    <div>
+        <main class="container">
+            <h1>Partituras</h1>
+            <h2>Orquestra</h2>
+            <button class="login" id="btnPrincipal">Partituras</button> 
+        </main>
+    </div>
+
+    <div id="modalPrincipal" class="modal">
+        <div class="conteudo--modal">
+            <span class="close principal">&times;</span> 
+            
+            <h3>Selecione o Instrumento:</h3>
+            
+            <button class="login btn-instrumento" data-modal-target="#modalSaxAlto">Sax Alto</button>
+            <button class="login btn-instrumento" data-modal-target="#modalSaxTenor">Sax Tenor</button>
+            <button class="login btn-instrumento" data-modal-target="#modalTrompete">Trompete</button>
+            <button class="login btn-instrumento" data-modal-target="#modalViola">Viola</button>
+            <button class="login btn-instrumento" data-modal-target="#modalViolino">Violino</button>
+            <button class="login btn-instrumento" data-modal-target="#modalVioloncello">Violoncello</button>
+        </div>
+    </div>
+
+    <div id="modalSaxAlto" class="modal modal-secundario">
+        <div class="conteudo--modal">
+            <span class="close secundario">&times;</span> 
+            <h3>Partituras: Sax Alto</h3>
+            <iframe src="https://drive.google.com/embeddedfolderview?id=1qm11aBaGuSNngzh6CqHms6R2LVl66dg6#grid" style="width:100%; height:600px; border:0;"></iframe>
+        </div>
+    </div>
+
+    <div id="modalSaxTenor" class="modal modal-secundario">
+        <div class="conteudo--modal">
+            <span class="close secundario">&times;</span> 
+            <h3>Partituras: Sax Tenor</h3>
+            <iframe src="https://drive.google.com/embeddedfolderview?id=1LJ2fiKLgiMdYxMqbdyFVcxAjn1ISxXQX#grid" style="width:100%; height:600px; border:0;"></iframe>
+        </div>
+    </div>
+
+    <div id="modalTrompete" class="modal modal-secundario">
+        <div class="conteudo--modal">
+            <span class="close secundario">&times;</span> 
+            <h3>Partituras: Trompete</h3>
+            <iframe src="https://drive.google.com/embeddedfolderview?id=1GhkLMWee6Xz5S0LGcG5xjUHg7UuH4aRy#grid" style="width:100%; height:600px; border:0;"></iframe>
+        </div>
+    </div>
+    
+    <div id="modalViola" class="modal modal-secundario">
+        <div class="conteudo--modal">
+            <span class="close secundario">&times;</span> 
+            <h3>Partituras: Viola</h3>
+            <iframe src="https://drive.google.com/embeddedfolderview?id=1NLOuPEVsrJgtyvQ1YBCjCL0PfoK5_KuG#grid" style="width:100%; height:600px; border:0;"></iframe>
+        </div>
+    </div>
+
+    <div id="modalViolino" class="modal modal-secundario">
+        <div class="conteudo--modal">
+            <span class="close secundario">&times;</span> 
+            <h3>Partituras: Violino</h3>
+            <iframe src="https://drive.google.com/embeddedfolderview?id=1PWUUHFd7xKMM5euQwk-Ns0GzeHi4FuW6#grid" style="width:100%; height:600px; border:0;"></iframe>
+        </div>
+    </div>
+    
+    <div id="modalVioloncello" class="modal modal-secundario">
+        <div class="conteudo--modal">
+            <span class="close secundario">&times;</span> 
+            <h3>Partituras: Violoncello</h3>
+            <iframe src="https://drive.google.com/embeddedfolderview?id=11CHHYmxW6qLvZFaf8jnwlNrwhLTE84OS#grid" style="width:100%; height:600px; border:0;"></iframe>
+        </div>
+    </div>
+    
+    <script src="../js/modal.js"></script>
+</body>
+
+</html>
