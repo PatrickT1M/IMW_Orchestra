@@ -4,30 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partituras - Asafe</title>
+
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/login.css">
-    <title>Login - Orchestra</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="../css/asafe.css">
+
 </head>
 
 <body>
-    <div>
-        <main class="container">
-            <h1>Partituras</h1>
-            <h5>IMW Cosmópolis</h5>
-            <button class="login" id="meuBotao">Entrar</button>
-        </main>
-    </div>
 
-    <div id="meuModal" class="modal">
-        <div class="conteudo--modal">
-            <span class="close">
-                &times;
-            </span>
-            <button class="login">Orquestra</button>
-            <button class="login">Asafe</button>
+    <main class="container-main glass-theme">
+        <h1>Partituras</h1>
+        <h2>Asafe</h2>
+
+        <button class="btn-menu" onclick="carregarPasta('1siBrCckBYMBEL-cNEQqDQfe6hZkDvPHt', 'Asafe')"><i class="fas fa-folder-open"></i> Acessar Partituras</button>
+    </main>
+
+    <div class="modal fade" id="modalListaArquivos" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tituloLista">Carregando...</h5>
+                    <div>
+                        <button type="button" class="btn btn-outline-light btn-sm me-2"
+                            data-bs-toggle="modal">Voltar</button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                </div>
+                <div class="modal-body">
+
+                    <div class="table-responsive">
+                        <table id="tabelaMateriais" class="table table-hover" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th class="col-tipo text-center" style="width: 5%">Tipo</th>
+                                    <th style="width: 65%">Nome do Arquivo</th>
+                                    <th style="width: 30%">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
-    <script src="../js/modal.js"></script>
+
+    <div class="modal fade" id="modalPreview" tabindex="-1" aria-hidden="true" style="z-index: 1060;">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background-color: #000;">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-white" id="tituloPreview">Visualização</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+                    <iframe id="iframePreview" class="preview-iframe" src=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <script src="../js/asafe.js"></script>
+    <script src="https://cdn.datatables.net/plug-ins/1.13.6/sorting/natural.js"></script>
 </body>
 
 </html>

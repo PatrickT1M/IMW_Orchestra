@@ -14,17 +14,17 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../images/image.png');
+    background: url('../images/Fundo.png');
     background-size: cover;
     background-position: center;
 }
 
 .container{
     width: 420px;
-    background-color: rgb(117, 117, 117);
+    background-color: rgb(255, 255, 255);
     border: 5px solid rgba(255,255,255,0.2);
     border-radius: 10px;
-    color:#fff;
+    color:#030301;
     padding: 30px 40px;
     box-shadow: rgb(192, 192, 192) 0px 20px 30px -10px;
 }
@@ -54,7 +54,7 @@ h2{
 .input--box input{
     width: 100%;
     height: 100%;
-    background-color: transparent;
+    background-color: transpaent;
     border: 2px solid rgba(151, 140, 140, 0.2);
     border-radius: 40px;
     outline: none;
@@ -99,12 +99,12 @@ h2{
     width: 100%;
     height: 50px;
     margin-top: 20px;
-    background-color: #fff;
+    background-color: #cc2936;
     border: none;
     border-radius:40px;
     cursor: pointer;
     font-size: 16px;
-    color:#333;
+    color:#f9f5ff;
     font-weight: 600;
     box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
 }
@@ -112,7 +112,7 @@ h2{
 .login:hover{
     border: 2px solid rgba(255,255,255,0.2);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    color: #000000;
+    color: #f9f5ff;
     transition: .5s;
 }
 

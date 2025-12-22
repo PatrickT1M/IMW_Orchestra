@@ -1,0 +1,229 @@
+/* --- SEU CSS ORIGINAL (BASE) --- */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/Fundo.png');
+    /* Sua imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    font-family: "Libertinus Sans", sans-serif;
+    margin: 0;
+}
+
+/* --- CUSTOMIZAÇÃO DO TEMA ESCURO/GLASS --- */
+
+/* O estilo "Caixa de Vidro" que você usa na tela de login */
+.glass-theme {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgba(255, 0, 0, 0.2);
+    border-radius: 10px;
+    /* Borda mais arredondada */
+    color: #030301;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Container Principal */
+.container-main {
+    width: 90%;
+    max-width: 420px;
+    padding: 30px 40px;
+    text-align: center;
+}
+
+.container-main h1 {
+    text-shadow: 4px 2px 6px #7d8491;
+    font-size: 36px;
+}
+
+/* Botões Estilo "Pílula" (Menu Principal) */
+.btn-menu {
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+    background-color: #cc2936;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #f9f5ff;
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transition: .4s;
+}
+
+.btn-menu:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    color: #030301;
+}
+
+/* --- CUSTOMIZAÇÃO AVANÇADA DOS MODAIS --- */
+
+/* Fundo do Modal (Janela) */
+.modal-content {
+    background-color: #f9f5ff;
+    /* Um pouco mais escuro que o fundo para contraste */
+    border: 2px solid rgba(255, 116, 116, 0.226);
+    color: #030301;
+    border-radius: 20px;
+}
+
+.modal-body{
+    background-color: #f9f5ff;
+    border-radius: 20px;
+}
+
+/* Cabeçalho do Modal */
+.modal-header {
+    border-bottom: 1px solid rgba(231, 0, 0, 0.1);
+    background-color: #f9f5ff;
+}
+
+.btn-close {
+    filter: invert(-1);
+    /* Deixa o X branco */
+}
+
+/* --- CUSTOMIZAÇÃO DA TABELA (O PULO DO GATO) --- */
+
+/* Remove o fundo branco padrão da tabela */
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-color: #030301;
+    --bs-table-border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Cabeçalho da Tabela */
+.table thead th {
+    background-color: rgba(255, 0, 0, 0.274) !important;
+    color: #f9f5ff;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Linhas da tabela ao passar o mouse */
+.table-hover tbody tr:hover td {
+    background-color: rgb(255, 255, 255);
+    /* Brilho suave */
+    color: #030301;
+}
+
+/* Inputs da Tabela (Pesquisa) */
+.dataTables_wrapper label {
+    color: #030301;
+}
+
+.dataTables_wrapper input,
+.dataTables_wrapper select {
+    background-color: rgba(255, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #f9f5ff;
+    border-radius: 20px;
+    outline: none;
+    padding: 5px 15px;
+}
+
+.dataTables_wrapper input:focus {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: #f9f5ff;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Paginação (Anterior/Próximo) */
+.page-link {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #030301;
+}
+
+.page-item.active .page-link {
+    background-color: #cc2936;
+    color: #f9f5ff;
+    border-color: white;
+}
+
+.page-item.disabled .page-link {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* --- NOVOS BOTÕES DE AÇÃO NA TABELA --- */
+.btn-acao {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: #14248a;
+    color: #f5f9ff;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    padding: 5px 15px;
+    transition: 0.3s;
+    margin-right: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-download {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: #cc2936;
+    color: #f5f9ff;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    padding: 5px 15px;
+    transition: 0.3s;
+    margin-right: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-acao:hover {
+    background: #1f37d4;
+    color: #f5f9ff;
+    transform: scale(1.05);
+}
+
+/* Botão específico de download (opcionalmente mais destacado) */
+.btn-download:hover {
+    color: #f9f5ff;
+    background: #74181f;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.btn-outline-light {
+    --bs-btn-color: #000;
+    --bs-btn-border-color: rgba(255, 0, 0, 0.2);
+}
+
+.--bs-modal-bg{
+    background-color: red;
+}
+/* Iframe Preview */
+.preview-iframe {
+    width: 100%;
+    height: 80vh;
+    border: none;
+    background: white;
+    border-radius: 8px;
+}
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+    .container-main {
+        width: 95%;
+        padding: 20px;
+    }
+
+    /* Esconde colunas menos importantes no celular */
+    .col-tipo {
+        display: none;
+    }
+
+    .btn-acao {
+        padding: 8px 10px;
+        /* Botões maiores para toque */
+        margin-bottom: 5px;
+        display: block;
+        /* Botões empilhados no celular */
+        width: 100%;
+        text-align: center;
+    }
+}
